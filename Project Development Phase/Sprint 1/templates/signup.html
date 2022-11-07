@@ -1,0 +1,57 @@
+<html>
+<head>
+  <link rel="stylesheet" href={{url_for('static', filename='styles/style.css')}}>
+</head>
+<body>
+<section class="user">
+  <div class="user_options-container">
+    <div class="user_options-text">
+      <div class="user_options-unregistered">
+        <h2 class="user_unregistered-title">Don't have an account?</h2>
+        <p class="user_unregistered-text">Create now!</p>
+        <button class="user_unregistered-signup" id="signup-button">Sign up</button>
+      </div>
+      <div class="user_options-registered">
+        <h2 class="user_registered-title">Already have a account!</h2>
+        <p class="user_registered-text">Get started..</p>
+        <a class="user_registered-login" id="signup-button" href="/">Login</a>
+      </div>
+    </div>
+    
+    <div class="user_options-forms" id="user_options-forms">
+      <div class="user_forms-signup">
+        <h2 class="forms_title">Sign Up</h2>
+        <h2 style="color:{{colour}};text-align:center;">{{status}}</h2>
+        <form class="forms_form" action="/signup" method="post" autocomplete="on">
+          <fieldset class="forms_fieldset">
+            <div class="forms_field">
+              <input type="text" placeholder="Full Name" name="name" class="forms_field-input" required />
+            </div>
+            <div class="forms_field">
+              <input type="email" placeholder="Email" name="email" class="forms_field-input" required />
+            </div>
+            <div class="forms_field">
+              <input type="password" placeholder="Password" name="password" class="forms_field-input" required />
+            </div>
+            <div class="forms_field">
+              <input type="number" placeholder="PhoneNumber" name="phone_number" class="forms_field-input" required />
+            </div>
+          </fieldset>
+          <div class="forms_buttons">
+            <input type="submit" value="Sign up" class="forms_buttons-action">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  const signupButton = document.getElementById("signup-button"),
+  loginButton = document.getElementById("login-button"),
+  userForms = document.getElementById("user_options-forms");
+  userForms.classList.remove("bounceRight");
+  userForms.classList.add("bounceLeft");
+</script>
+</body>
+</html>
+
