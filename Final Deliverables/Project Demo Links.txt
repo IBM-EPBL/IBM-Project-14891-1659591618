@@ -1,6 +1,6 @@
 
 PROJECT DEMO LINK:
-             < a href="https://youtu.be/vlsgCkzxNE8" >
+             https://youtu.be/vlsgCkzxNE8
  
 DEPLOYED WEB APP URL:
-              <a href="http://169.51.207.195:32478/">
+             http://169.51.207.195:32478/
